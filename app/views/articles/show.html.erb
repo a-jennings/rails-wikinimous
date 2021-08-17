@@ -1,15 +1,17 @@
 <div class="container">
   <div class="row mt-3">
     <h1><%= @article.title %></h1>
+  </div>
+  <div class="row mt-2">
     <p><%= @article.content %></p>
   </div>
   <div class="row"></div>
-    <%= link_to 'Edit', edit_article_path, class: "btn btn-warning m-1" %>
+    <%= link_to 'Edit', edit_article_path, class: "btn btn-primary m-1" %>
     <%= link_to 'Delete',
       article_path(@article),
       method: :delete,
       data: { confirm: "Delete post?" },
       class: "btn btn-danger m-1" %>
-    <%= link_to 'Back', articles_path, class: "btn btn-primary m-1" %>
+    <%= link_to 'Back', articles_path, class: "btn btn-default m-1" %>
   </div>
 </div>
